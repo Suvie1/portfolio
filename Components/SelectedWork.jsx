@@ -233,15 +233,17 @@ export default function SelectedWork() {
       <section className="work-intro" id="work" aria-labelledby="selected-work-title">
         <div className="section-inner work-intro-inner">
           <p className="section-label">SELECTED WORK / 01</p>
-          <h2 id="selected-work-title">A selection of web and email design work.</h2>
+          <h2 id="selected-work-title">
+            A selection of content strategy, web, and email design work.
+          </h2>
         </div>
       </section>
+
+      <SeoContentStrategy />
 
       {webProjects.map((project) => (
         <FeaturedProject project={project} key={project.id} />
       ))}
-
-      <SeoContentStrategy />
 
       <section className="email-showcase" aria-labelledby="email-showcase-title">
         <div className="section-inner email-intro">
