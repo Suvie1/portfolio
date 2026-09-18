@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SeoContentStrategy from "./SeoContentStrategy";
 
 const webProjects = [
   {
@@ -239,6 +240,8 @@ export default function SelectedWork() {
       {webProjects.map((project) => (
         <FeaturedProject project={project} key={project.id} />
       ))}
+
+      <SeoContentStrategy />
 
       <section className="email-showcase" aria-labelledby="email-showcase-title">
         <div className="section-inner email-intro">
