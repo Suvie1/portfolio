@@ -1,94 +1,42 @@
-"use client";
-
 import Image from "next/image";
-import { useCallback, useRef } from "react";
 
 export default function Hero() {
-  const artRef = useRef(null);
-
-  const handlePointerMove = useCallback((event) => {
-    if (!artRef.current || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-      return;
-    }
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
-    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 10;
-
-    artRef.current.style.setProperty("--drift-x", `${x.toFixed(2)}px`);
-    artRef.current.style.setProperty("--drift-y", `${y.toFixed(2)}px`);
-  }, []);
-
-  const resetPointer = useCallback(() => {
-    if (!artRef.current) return;
-    artRef.current.style.setProperty("--drift-x", "0px");
-    artRef.current.style.setProperty("--drift-y", "0px");
-  }, []);
-
   return (
-    <section
-      className="hero"
-      aria-labelledby="hero-title"
-      onPointerMove={handlePointerMove}
-      onPointerLeave={resetPointer}
-    >
+    <section className="hero" aria-labelledby="hero-title">
       <div className="hero-inner">
-        <div className="headline-wrap">
+        <div className="hero-copy">
+          <p className="hero-label">
+            CONTENT WRITER / SEO STRATEGIST / DIGITAL CREATIVE
+          </p>
           <h1 id="hero-title" className="hero-title">
-            <span className="reveal-line">
-              <span>DIGITAL WORK</span>
-            </span>
-            <span className="reveal-line">
-              <span>DESIGNED TO</span>
-            </span>
-            <span className="reveal-line">
-              <span className="serif-line">MOVE PEOPLE.</span>
-            </span>
+            Content, strategy, and digital work that move businesses forward.
           </h1>
+          <p className="hero-description">
+            I help brands grow and communicate clearly through strategic content
+            writing, SEO, web design, and email design that attract, engage, and
+            convert the right audience.
+          </p>
+          <div className="hero-actions">
+            <a className="hero-action hero-action-primary" href="#work">
+              View My Work
+            </a>
+            <a className="hero-action hero-action-secondary" href="mailto:omosuvieodjuvwu@gmail.com">
+              Get in Touch
+            </a>
+          </div>
         </div>
 
-        <p className="hero-meta">WEB DESIGN / EMAIL DESIGN / UX / CONTENT</p>
-
-        <div className="hero-art" ref={artRef} aria-label="Joseph Omosuvie portrait with portfolio work previews">
-          <div className="outline-rect" aria-hidden="true" />
-          <div className="accent-marker" aria-hidden="true" />
-
-          <figure className="art-board hero-board hero-board-web">
-            <Image
-              src="/assets/clearstone-homepage-hero.png"
-              alt="Clearstone Surfaces desktop homepage design screenshot"
-              fill
-              priority
-              sizes="(max-width: 767px) 58vw, 24vw"
-            />
-          </figure>
-
-          <figure className="art-board hero-board hero-board-email">
-            <Image
-              src="/assets/fenty-email-hero.png"
-              alt="Fenty Beauty email design crop"
-              fill
-              priority
-              sizes="(max-width: 767px) 42vw, 18vw"
-            />
-          </figure>
-
-          <figure className="art-board headshot-board">
+        <div className="hero-image-column">
+          <figure className="hero-portrait">
             <Image
               src="/assets/portfolio-headshot.jpeg"
               alt="Portrait of Joseph Omosuvie"
               fill
               priority
-              sizes="(max-width: 767px) 58vw, 24vw"
+              sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1100px) 38vw, 32vw"
             />
           </figure>
         </div>
-
-        <p className="scroll-cue">SCROLL TO EXPLORE ↓</p>
       </div>
     </section>
   );
