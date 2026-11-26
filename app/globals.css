@@ -383,21 +383,6 @@ a:focus-visible {
   margin: 0 0 clamp(16px, 1.6vw, 24px);
 }
 
-.capabilities-section {
-  background: var(--accent);
-  color: var(--ink);
-}
-
-.capabilities-inner {
-  padding-top: clamp(110px, 10vw, 140px);
-  padding-bottom: clamp(110px, 10vw, 140px);
-}
-
-.capabilities-inner .section-label {
-  color: rgba(17, 17, 17, 0.66);
-}
-
-.capabilities-inner h2,
 .section-heading-block h2,
 .about-copy h2,
 .final-cta-inner h2 {
@@ -405,21 +390,6 @@ a:focus-visible {
   font-size: clamp(48px, 6vw, 92px);
   font-weight: 800;
   line-height: 0.94;
-  letter-spacing: -0.055em;
-}
-
-.capability-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(16px, 2vw, 28px) clamp(26px, 4vw, 58px);
-  max-width: 1180px;
-  margin-top: clamp(48px, 5vw, 72px);
-}
-
-.capability-list span {
-  font-size: clamp(38px, 6.4vw, 104px);
-  font-weight: 800;
-  line-height: 0.9;
   letter-spacing: -0.055em;
 }
 
@@ -830,27 +800,11 @@ a:focus-visible {
     margin-bottom: 18px;
   }
 
-  .capabilities-inner {
-    padding-top: 88px;
-    padding-bottom: 92px;
-  }
-
-  .capabilities-inner h2,
   .section-heading-block h2,
   .about-copy h2,
   .final-cta-inner h2 {
     font-size: clamp(42px, 11vw, 64px);
     line-height: 0.98;
-  }
-
-  .capability-list {
-    margin-top: 46px;
-    gap: 16px 24px;
-  }
-
-  .capability-list span {
-    font-size: clamp(36px, 12vw, 58px);
-    line-height: 0.94;
   }
 
   .philosophy-grid,

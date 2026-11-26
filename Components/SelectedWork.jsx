@@ -2,6 +2,7 @@ import Image from "next/image";
 import SeoContentStrategy from "./SeoContentStrategy";
 import EmailDesignShowcase from "./EmailDesignShowcase";
 import WebDesignShowcase from "./WebDesignShowcase";
+import Capabilities from "./Capabilities";
 
 export default function SelectedWork() {
   return (
@@ -12,20 +13,7 @@ export default function SelectedWork() {
 
       <WebDesignShowcase />
 
-      <section className="capabilities-section" aria-labelledby="capabilities-title">
-        <div className="section-inner capabilities-inner">
-          <p className="section-label">CAPABILITIES / 03</p>
-          <h2 id="capabilities-title">What I work across.</h2>
-          <div className="capability-list" aria-label="Design and content capabilities">
-            <span>WEB DESIGN</span>
-            <span>EMAIL DESIGN</span>
-            <span>UX</span>
-            <span>CONTENT</span>
-            <span>SEO</span>
-            <span>CONVERSION</span>
-          </div>
-        </div>
-      </section>
+      <Capabilities />
 
       <section className="philosophy-section" aria-labelledby="philosophy-title">
         <div className="section-inner philosophy-grid">
