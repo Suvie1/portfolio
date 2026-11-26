@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --canvas: #f2f0ea;
+  --canvas: #f2f2f2;
   --ink: #111111;
-  --muted: #696761;
-  --accent: #c7ff3d;
+  --dark-gray: #333333;
+  --muted: #666666;
+  --charcoal: #242424;
   --white: #ffffff;
-  --line: rgba(17, 17, 17, 0.12);
+  --off-white: #fafafa;
+  --pale-ash: #f2f2f2;
+  --soft-ash: #e8e8e8;
+  --medium-ash: #d6d6d6;
+  --border-gray: #cecece;
+  --line: var(--border-gray);
   --grid-max: 1440px;
   --page-pad: 64px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -33,7 +39,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--medium-ash);
   color: var(--ink);
 }
 
@@ -52,8 +58,8 @@ a:focus-visible {
   top: 0;
   z-index: 20;
   height: 84px;
-  border-bottom: 1px solid #d9d9d9;
-  background: #ffffff;
+  border-bottom: 1px solid var(--border-gray);
+  background: var(--white);
 }
 
 .site-nav {
@@ -68,7 +74,7 @@ a:focus-visible {
 }
 
 .brand {
-  color: #111111;
+  color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(26px, 2.25vw, 36px);
   font-weight: 700;
@@ -83,7 +89,7 @@ a:focus-visible {
 }
 
 .nav-links a {
-  color: #111111;
+  color: var(--ink);
   font-size: clamp(15px, 1.15vw, 20px);
   font-weight: 600;
   line-height: 1.3;
@@ -92,18 +98,18 @@ a:focus-visible {
 }
 
 .nav-links a:hover {
-  color: #666666;
+  color: var(--muted);
 }
 
 .hero {
-  background: #ffffff;
-  color: #111111;
+  background: var(--pale-ash);
+  color: var(--ink);
 }
 
 .site-header ::selection,
 .hero ::selection {
-  background: #d9d9d9;
-  color: #111111;
+  background: var(--medium-ash);
+  color: var(--ink);
 }
 
 .hero-inner {
@@ -140,7 +146,7 @@ a:focus-visible {
 .hero-description {
   max-width: 770px;
   margin: clamp(28px, 2.6vw, 38px) 0 0;
-  color: #333333;
+  color: var(--dark-gray);
   font-size: clamp(17px, 1.55vw, 26px);
   font-weight: 500;
   line-height: 1.52;
@@ -160,7 +166,7 @@ a:focus-visible {
   min-width: clamp(176px, 16vw, 272px);
   min-height: 64px;
   padding: 14px 24px;
-  border: 1px solid #111111;
+  border: 1px solid var(--ink);
   font-size: clamp(16px, 1.3vw, 22px);
   font-weight: 700;
   line-height: 1.2;
@@ -169,21 +175,21 @@ a:focus-visible {
 }
 
 .hero-action-primary {
-  background: #111111;
-  color: #ffffff;
+  background: var(--ink);
+  color: var(--white);
 }
 
 .hero-action-primary:hover {
-  background: #333333;
+  background: var(--dark-gray);
 }
 
 .hero-action-secondary {
-  background: #ffffff;
-  color: #111111;
+  background: var(--white);
+  color: var(--ink);
 }
 
 .hero-action-secondary:hover {
-  background: #f5f5f5;
+  background: var(--off-white);
 }
 
 .hero-image-column {
@@ -191,7 +197,7 @@ a:focus-visible {
   align-items: center;
   padding: 0 0 0 clamp(42px, 5vw, 82px);
   margin: 38px 0 50px;
-  border-left: 1px solid #d9d9d9;
+  border-left: 1px solid var(--border-gray);
 }
 
 .hero-portrait {
@@ -201,7 +207,7 @@ a:focus-visible {
   aspect-ratio: 508 / 350;
   overflow: hidden;
   margin: 0;
-  background: #f5f5f5;
+  background: var(--soft-ash);
 }
 
 .hero-portrait img {
@@ -212,13 +218,13 @@ a:focus-visible {
 
 .writing-section {
   padding: clamp(84px, 8vw, 124px) 0 clamp(100px, 9vw, 140px);
-  background: #ffffff;
-  color: #111111;
+  background: var(--white);
+  color: var(--ink);
 }
 
 .writing-section ::selection {
-  background: #d9d9d9;
-  color: #111111;
+  background: var(--medium-ash);
+  color: var(--ink);
 }
 
 .writing-inner {
@@ -234,7 +240,7 @@ a:focus-visible {
 .writing-kicker,
 .writing-card-platform {
   margin: 0;
-  color: #666666;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -257,7 +263,7 @@ a:focus-visible {
 .writing-lead {
   max-width: 740px;
   margin: 24px 0 0;
-  color: #333333;
+  color: var(--dark-gray);
   font-size: clamp(17px, 1.3vw, 20px);
   line-height: 1.55;
 }
@@ -273,8 +279,8 @@ a:focus-visible {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  border: 1px solid #d9d9d9;
-  background: #ffffff;
+  border: 1px solid var(--border-gray);
+  background: var(--off-white);
 }
 
 .writing-card-preview {
@@ -283,7 +289,7 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: #f5f5f5;
+  background: var(--soft-ash);
 }
 
 .writing-card-preview img {
@@ -299,7 +305,7 @@ a:focus-visible {
   max-width: 24ch;
   margin: 0;
   padding: 26px;
-  color: #333333;
+  color: var(--dark-gray);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(23px, 2vw, 30px);
   line-height: 1.15;
@@ -323,7 +329,7 @@ a:focus-visible {
 
 .writing-card-excerpt {
   margin: 18px 0 26px;
-  color: #666666;
+  color: var(--muted);
   font-size: 15px;
   line-height: 1.55;
 }
@@ -335,10 +341,10 @@ a:focus-visible {
   justify-content: center;
   margin-top: auto;
   padding: 10px 20px;
-  border: 1px solid #111111;
+  border: 1px solid var(--ink);
   border-radius: 0;
-  background: #ffffff;
-  color: #111111;
+  background: var(--white);
+  color: var(--ink);
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
@@ -349,19 +355,19 @@ a:focus-visible {
 
 .writing-card-cta:hover,
 .writing-card-cta:focus-visible {
-  background: #111111;
-  color: #ffffff;
+  background: var(--ink);
+  color: var(--white);
 }
 
 .writing-card-cta:focus-visible {
-  outline: 2px solid #111111;
+  outline: 2px solid var(--ink);
   outline-offset: 3px;
 }
 
 .writing-card-cta:disabled {
-  border-color: #d9d9d9;
-  background: #f5f5f5;
-  color: #666666;
+  border-color: var(--border-gray);
+  background: var(--off-white);
+  color: var(--muted);
   cursor: not-allowed;
 }
 
@@ -393,9 +399,13 @@ a:focus-visible {
   letter-spacing: -0.055em;
 }
 
-.philosophy-section,
+.philosophy-section {
+  background: var(--pale-ash);
+  color: var(--ink);
+}
+
 .about-section {
-  background: var(--canvas);
+  background: var(--white);
   color: var(--ink);
 }
 
@@ -429,7 +439,7 @@ a:focus-visible {
 
 .principles-list {
   margin-top: clamp(44px, 4vw, 60px);
-  border-top: 1px solid rgba(17, 17, 17, 0.14);
+  border-top: 1px solid var(--border-gray);
 }
 
 .principles-list div {
@@ -437,7 +447,7 @@ a:focus-visible {
   grid-template-columns: 0.34fr 0.66fr;
   gap: 28px;
   padding: 22px 0;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+  border-bottom: 1px solid var(--border-gray);
 }
 
 .principles-list h3 {
@@ -459,7 +469,7 @@ a:focus-visible {
 .about-grid {
   grid-template-columns: minmax(280px, 0.45fr) minmax(0, 0.55fr);
   align-items: center;
-  border-top: 1px solid rgba(17, 17, 17, 0.12);
+  border-top: 1px solid var(--border-gray);
 }
 
 .about-portrait {
@@ -467,10 +477,9 @@ a:focus-visible {
   aspect-ratio: 4 / 5;
   overflow: hidden;
   margin: 0;
-  border: 1px solid rgba(17, 17, 17, 0.1);
-  border-radius: 18px;
+  border: 1px solid var(--border-gray);
+  border-radius: 2px;
   background: var(--white);
-  box-shadow: 0 22px 54px rgba(17, 17, 17, 0.1);
 }
 
 .about-portrait img {
@@ -504,16 +513,12 @@ a:focus-visible {
   margin-top: 12px !important;
 }
 
-.final-cta-section,
-.site-footer {
-  background: var(--ink);
-  color: var(--canvas);
-}
-
 .final-cta-section {
   min-height: 72vh;
   display: flex;
   align-items: center;
+  background: var(--charcoal);
+  color: var(--off-white);
 }
 
 .final-cta-inner {
@@ -523,7 +528,7 @@ a:focus-visible {
 
 .final-cta-inner .section-label,
 .final-cta-inner > p {
-  color: rgba(242, 240, 234, 0.68);
+  color: #c2c2c2;
 }
 
 .final-cta-inner h2 {
@@ -540,7 +545,7 @@ a:focus-visible {
   align-items: center;
   margin-top: clamp(36px, 4vw, 54px);
   padding: 18px 26px;
-  background: var(--accent);
+  background: var(--white);
   color: var(--ink);
   font-size: 12px;
   font-weight: 900;
@@ -548,21 +553,22 @@ a:focus-visible {
   letter-spacing: 0.16em;
   transition:
     background-color 180ms ease,
-    color 180ms ease,
-    transform 180ms ease;
+    color 180ms ease;
 }
 
 .conversation-cta:hover {
-  background: var(--canvas);
-  transform: translateX(4px);
+  background: var(--soft-ash);
 }
 
 .conversation-cta:focus-visible {
-  outline-color: var(--canvas);
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
 }
 
 .site-footer {
-  border-top: 1px solid rgba(242, 240, 234, 0.14);
+  border-top: 1px solid var(--muted);
+  background: var(--ink);
+  color: var(--off-white);
 }
 
 .footer-inner {
@@ -587,7 +593,7 @@ a:focus-visible {
 .footer-brand span {
   display: block;
   margin-top: 10px;
-  color: rgba(242, 240, 234, 0.58);
+  color: #a8a8a8;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -613,6 +619,11 @@ a:focus-visible {
   opacity: 0.68;
 }
 
+.site-footer a:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+}
+
 .footer-social a {
   overflow-wrap: anywhere;
 }
@@ -620,7 +631,7 @@ a:focus-visible {
 .footer-bottom {
   grid-column: 1 / 4;
   padding-top: 34px;
-  color: rgba(242, 240, 234, 0.52);
+  color: #a8a8a8;
 }
 
 @media (min-width: 1680px) {
@@ -827,7 +838,7 @@ a:focus-visible {
   }
 
   .about-portrait {
-    border-radius: 16px;
+    border-radius: 2px;
   }
 
   .final-cta-section {

@@ -1,5 +1,5 @@
-.section { scroll-margin-top: 84px; }
-.preview { height: clamp(460px, 39vw, 560px); }
+.section.section { scroll-margin-top: 84px; background: var(--off-white); }
+.preview { height: clamp(460px, 39vw, 560px); background: var(--white); }
 .viewerImage { display: block; width: min(1000px, max(100%, 680px)); max-width: none; height: auto; margin-inline: auto; }
 
 @media (max-width: 899px) {
@@ -7,6 +7,6 @@
 }
 
 @media (max-width: 767px) {
-  .section { scroll-margin-top: 90px; }
+  .section.section { scroll-margin-top: 90px; }
   .preview { height: clamp(390px, 112vw, 500px); }
 }

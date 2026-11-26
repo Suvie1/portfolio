@@ -1,32 +1,32 @@
 .section {
   padding: clamp(54px, 5vw, 72px) 0;
   scroll-margin-top: 84px;
-  border-top: 1px solid #d9d9d9;
-  background: #fff;
-  color: #111;
+  border-top: 1px solid var(--border-gray);
+  background: var(--soft-ash);
+  color: var(--ink);
 }
 
-.section ::selection { background: #d9d9d9; color: #111; }
+.section ::selection { background: var(--medium-ash); color: var(--ink); }
 .inner { width: min(100%, 1680px); margin: 0 auto; padding: 0 clamp(20px, 4.8vw, 80px); }
 .intro { max-width: 940px; }
 .kicker, .slideNumber, .imageControls, .slideControls span { font-size: 11px; font-weight: 800; letter-spacing: .15em; }
-.kicker { margin: 0 0 14px; color: #666; }
+.kicker { margin: 0 0 14px; color: var(--muted); }
 .intro h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 4vw, 60px); line-height: 1.05; letter-spacing: -.035em; }
-.intro > p:last-child { max-width: 820px; margin: 18px 0 0; color: #333; font-size: clamp(16px, 1.2vw, 18px); line-height: 1.55; }
+.intro > p:last-child { max-width: 820px; margin: 18px 0 0; color: var(--dark-gray); font-size: clamp(16px, 1.2vw, 18px); line-height: 1.55; }
 
 .track {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   margin-top: clamp(30px, 3vw, 40px);
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   overscroll-behavior-inline: contain;
 }
 .track::-webkit-scrollbar { display: none; }
-.track:focus-visible, .section button:focus-visible { outline: 2px solid #111; outline-offset: 3px; }
+.track:focus-visible, .section button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .slide {
   display: grid;
   flex: 0 0 100%;
@@ -38,28 +38,28 @@
   scroll-snap-stop: always;
 }
 .slideCopy { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; }
-.slideNumber { margin: 0 0 16px; color: #666; }
+.slideNumber { margin: 0 0 16px; color: var(--muted); }
 .slideCopy h3 { max-width: 15ch; margin: 0; font-size: clamp(28px, 2.5vw, 40px); line-height: 1.08; letter-spacing: -.04em; }
-.description { max-width: 48ch; margin: 18px 0 0; color: #333; font-size: clamp(15px, 1.05vw, 17px); line-height: 1.55; }
-.note { max-width: 52ch; margin: 14px 0 0; color: #666; font-size: 13px; line-height: 1.5; }
+.description { max-width: 48ch; margin: 18px 0 0; color: var(--dark-gray); font-size: clamp(15px, 1.05vw, 17px); line-height: 1.55; }
+.note { max-width: 52ch; margin: 14px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
 .slideControls { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 28px; }
-.slideControls span { margin-left: 10px; color: #666; white-space: nowrap; }
+.slideControls span { margin-left: 10px; color: var(--muted); white-space: nowrap; }
 .slideControls button, .imageNavigation button {
   display: inline-flex;
   width: 42px;
   height: 42px;
   align-items: center;
   justify-content: center;
-  border: 1px solid #111;
+  border: 1px solid var(--ink);
   border-radius: 0;
-  background: #fff;
-  color: #111;
+  background: var(--white);
+  color: var(--ink);
   font: inherit;
   font-size: 19px;
   cursor: pointer;
 }
-.slideControls button:hover:not(:disabled), .imageNavigation button:hover:not(:disabled), .viewerClose:hover { background: #111; color: #fff; }
-.slideControls button:disabled, .imageNavigation button:disabled { border-color: #d9d9d9; color: #666; cursor: not-allowed; }
+.slideControls button:hover:not(:disabled), .imageNavigation button:hover:not(:disabled), .viewerClose:hover { background: var(--ink); color: var(--white); }
+.slideControls button:disabled, .imageNavigation button:disabled { border-color: var(--border-gray); color: var(--muted); cursor: not-allowed; }
 .visualPanel { display: flex; min-width: 0; flex-direction: column; }
 .imageOpen {
   display: flex;
@@ -69,21 +69,21 @@
   justify-content: center;
   overflow: hidden;
   padding: 12px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border-gray);
   border-radius: 0;
-  background: #f5f5f5;
+  background: var(--white);
   cursor: zoom-in;
 }
 .imageOpen img { display: block; width: auto; max-width: 100%; height: auto; max-height: 100%; object-fit: contain; }
-.imageControls { display: flex; min-height: 44px; align-items: center; justify-content: space-between; gap: 12px; color: #666; }
+.imageControls { display: flex; min-height: 44px; align-items: center; justify-content: space-between; gap: 12px; color: var(--muted); }
 .imageNavigation { display: flex; align-items: center; gap: 10px; }
 .imageNavigation button { width: 32px; height: 32px; font-size: 16px; }
 
-.viewer { width: min(96vw, 1700px); max-width: none; max-height: 94vh; padding: 0; border: 1px solid #d9d9d9; border-radius: 0; background: #fff; color: #111; }
+.viewer { width: min(96vw, 1700px); max-width: none; max-height: 94vh; padding: 0; border: 1px solid var(--border-gray); border-radius: 0; background: var(--white); color: var(--ink); }
 .viewer::backdrop { background: rgba(17, 17, 17, .82); }
 .viewerContent { display: flex; flex-direction: column; }
-.viewerClose { align-self: flex-end; min-height: 48px; padding: 10px 18px; border: 0; border-left: 1px solid #d9d9d9; background: #fff; color: #111; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .1em; cursor: pointer; }
-.viewerScroll { max-height: calc(94vh - 48px); overflow: auto; border-top: 1px solid #d9d9d9; }
+.viewerClose { align-self: flex-end; min-height: 48px; padding: 10px 18px; border: 0; border-left: 1px solid var(--border-gray); background: var(--white); color: var(--ink); font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .1em; cursor: pointer; }
+.viewerScroll { max-height: calc(94vh - 48px); overflow: auto; border-top: 1px solid var(--border-gray); }
 .viewerScroll img { display: block; max-width: none; height: auto; }
 
 @media (max-width: 899px) {
