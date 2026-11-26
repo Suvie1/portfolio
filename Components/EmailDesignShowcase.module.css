@@ -1,0 +1,12 @@
+.section { scroll-margin-top: 84px; }
+.preview { height: clamp(460px, 39vw, 560px); }
+.viewerImage { display: block; width: min(1000px, max(100%, 680px)); max-width: none; height: auto; margin-inline: auto; }
+
+@media (max-width: 899px) {
+  .preview { height: clamp(420px, 68vw, 540px); }
+}
+
+@media (max-width: 767px) {
+  .section { scroll-margin-top: 90px; }
+  .preview { height: clamp(390px, 112vw, 500px); }
+}

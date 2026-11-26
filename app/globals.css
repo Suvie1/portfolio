@@ -371,9 +371,7 @@ a:focus-visible {
   padding: 0 var(--page-pad);
 }
 
-.section-label,
-.project-meta,
-.project-cta {
+.section-label {
   color: var(--muted);
   font-size: 11px;
   font-weight: 800;
@@ -383,252 +381,6 @@ a:focus-visible {
 
 .section-label {
   margin: 0 0 clamp(16px, 1.6vw, 24px);
-}
-
-.featured-project {
-  padding: clamp(120px, 10vw, 150px) 0;
-  border-top: 1px solid rgba(17, 17, 17, 0.12);
-}
-
-.featured-project-grid {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
-  gap: clamp(48px, 5vw, 88px);
-  align-items: start;
-}
-
-.project-copy {
-  max-width: 420px;
-}
-
-.project-meta {
-  margin: 0;
-}
-
-.featured-project h3 {
-  margin: clamp(12px, 1.2vw, 16px) 0 0;
-  font-size: clamp(38px, 4vw, 62px);
-  font-weight: 800;
-  line-height: 0.94;
-  letter-spacing: -0.045em;
-}
-
-.project-description {
-  max-width: 410px;
-  margin: clamp(20px, 1.8vw, 24px) 0 0;
-  color: var(--muted);
-  font-size: clamp(16px, 1.2vw, 18px);
-  font-weight: 500;
-  line-height: 1.62;
-}
-
-.project-cta {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  margin-top: clamp(28px, 2.6vw, 36px);
-  color: var(--ink);
-  white-space: nowrap;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-.project-cta:hover {
-  opacity: 0.72;
-  transform: translateX(3px);
-}
-
-.project-cta::before {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 9px;
-  background: var(--accent);
-  content: "";
-}
-
-.project-gallery-wrap {
-  min-width: 0;
-}
-
-.project-gallery {
-  display: flex;
-  gap: 18px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 0 18px;
-  scroll-padding-left: 0;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(17, 17, 17, 0.28) transparent;
-  -webkit-overflow-scrolling: touch;
-  cursor: grab;
-}
-
-.project-gallery:active {
-  cursor: grabbing;
-}
-
-.project-gallery:focus-visible {
-  outline: 1px solid var(--ink);
-  outline-offset: 8px;
-}
-
-.project-gallery::-webkit-scrollbar {
-  height: 6px;
-}
-
-.project-gallery::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.project-gallery::-webkit-scrollbar-thumb {
-  background: rgba(17, 17, 17, 0.22);
-}
-
-.gallery-slide {
-  position: relative;
-  flex: 0 0 88%;
-  aspect-ratio: 16 / 10.5;
-  overflow: hidden;
-  margin: 0;
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  border-radius: 18px;
-  background: var(--white);
-  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.08);
-  scroll-snap-align: start;
-}
-
-.gallery-slide::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
-  height: 34px;
-  border-bottom: 1px solid rgba(17, 17, 17, 0.07);
-  background: rgba(255, 255, 255, 0.78);
-  content: "";
-}
-
-.gallery-slide img {
-  object-fit: cover;
-  object-position: 50% 0%;
-}
-
-.gallery-progress {
-  display: grid;
-  grid-template-columns: auto minmax(140px, 1fr);
-  gap: 18px;
-  align-items: center;
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-}
-
-.gallery-progress-line {
-  height: 1px;
-  background: rgba(17, 17, 17, 0.14);
-}
-
-.gallery-progress-line span {
-  display: block;
-  width: 33.333%;
-  height: 1px;
-  background: var(--ink);
-}
-
-.email-showcase {
-  --email-bg: #111111;
-  --email-text: #f2f0ea;
-  --email-muted: rgba(242, 240, 234, 0.62);
-  overflow: hidden;
-  background: var(--email-bg);
-  color: var(--email-text);
-}
-
-.email-intro {
-  padding-top: clamp(110px, 10vw, 150px);
-  padding-bottom: clamp(76px, 7vw, 104px);
-}
-
-.email-intro .section-label {
-  color: var(--email-muted);
-}
-
-.email-intro h2 {
-  max-width: 820px;
-  margin: 0;
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(56px, 7vw, 104px);
-  font-weight: 400;
-  line-height: 0.94;
-  letter-spacing: -0.028em;
-}
-
-.email-intro p:last-child {
-  max-width: 620px;
-  margin: clamp(20px, 2vw, 28px) 0 0;
-  color: var(--email-muted);
-  font-size: clamp(17px, 1.4vw, 20px);
-  font-weight: 500;
-  line-height: 1.58;
-}
-
-.email-project {
-  border-top-color: rgba(242, 240, 234, 0.14);
-}
-
-.email-project .project-meta,
-.email-project .project-description,
-.email-project .gallery-progress {
-  color: var(--email-muted);
-}
-
-.email-project .project-cta {
-  color: var(--email-text);
-}
-
-.email-project .project-cta::before {
-  background: var(--accent);
-}
-
-.email-project .project-gallery:focus-visible {
-  outline-color: var(--email-text);
-}
-
-.email-project .gallery-progress-line {
-  background: rgba(242, 240, 234, 0.16);
-}
-
-.email-project .gallery-progress-line span {
-  background: var(--email-text);
-}
-
-.email-gallery {
-  gap: 18px;
-}
-
-.email-slide {
-  flex-basis: 88%;
-  aspect-ratio: 4 / 5.1;
-  max-height: 820px;
-  border-color: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  background: #f7f7f5;
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
-}
-
-.email-slide::before {
-  display: none;
-}
-
-.email-slide img {
-  object-fit: contain;
-  object-position: 50% 0%;
 }
 
 .capabilities-section {
@@ -932,11 +684,6 @@ a:focus-visible {
     padding-left: clamp(30px, 4vw, 52px);
   }
 
-  .featured-project-grid {
-    grid-template-columns: minmax(230px, 0.36fr) minmax(0, 0.64fr);
-    gap: 40px;
-  }
-
   .philosophy-grid,
   .about-grid {
     gap: 54px;
@@ -944,28 +691,6 @@ a:focus-visible {
 }
 
 @media (max-width: 899px) {
-  .featured-project-grid {
-    display: block;
-  }
-
-  .project-copy {
-    max-width: 560px;
-  }
-
-  .project-gallery-wrap {
-    margin-top: clamp(40px, 6vw, 56px);
-  }
-
-  .gallery-slide {
-    flex-basis: 90%;
-  }
-
-  .email-slide {
-    flex-basis: 88%;
-    aspect-ratio: 4 / 5.35;
-    max-height: 760px;
-  }
-
   .philosophy-grid,
   .about-grid {
     display: block;
@@ -1105,44 +830,6 @@ a:focus-visible {
     margin-bottom: 18px;
   }
 
-  .featured-project {
-    padding: 88px 0;
-  }
-
-  .featured-project h3 {
-    margin-top: 14px;
-    font-size: clamp(38px, 10vw, 56px);
-  }
-
-  .project-description {
-    font-size: 16px;
-    line-height: 1.58;
-  }
-
-  .project-gallery {
-    gap: 14px;
-  }
-
-  .gallery-slide {
-    flex-basis: 91%;
-    aspect-ratio: 4 / 3.15;
-    border-radius: 16px;
-  }
-
-  .email-intro {
-    padding-top: 92px;
-    padding-bottom: 76px;
-  }
-
-  .email-intro h2 {
-    font-size: clamp(48px, 13vw, 72px);
-  }
-
-  .email-slide {
-    flex-basis: 88%;
-    aspect-ratio: 4 / 5.55;
-  }
-
   .capabilities-inner {
     padding-top: 88px;
     padding-bottom: 92px;
@@ -1222,25 +909,6 @@ a:focus-visible {
 
   .hero-title {
     font-size: clamp(42px, 11.5vw, 48px);
-  }
-
-  .project-gallery-wrap {
-    margin-top: 40px;
-  }
-
-  .gallery-slide {
-    flex-basis: 92%;
-    aspect-ratio: 4 / 3.35;
-  }
-
-  .email-slide {
-    flex-basis: 89%;
-    aspect-ratio: 4 / 5.75;
-  }
-
-  .gallery-progress {
-    grid-template-columns: auto minmax(88px, 1fr);
-    gap: 14px;
   }
 
   .about-copy > p,
