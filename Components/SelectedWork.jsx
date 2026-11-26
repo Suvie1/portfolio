@@ -1,93 +1,6 @@
 import Image from "next/image";
 import SeoContentStrategy from "./SeoContentStrategy";
-
-const webProjects = [
-  {
-    title: "Clearstone Surfaces",
-    id: "clearstone-title",
-    metadata: "WEB DESIGN / CONCEPT STUDY / 2026",
-    description:
-      "A refined countertop website concept built around premium materials, strong visual hierarchy, and a homeowner-focused browsing experience that makes discovering surfaces, understanding the process, and taking the next step feel simple.",
-    images: [
-      {
-        src: "/assets/clearstone-homepage-hero.png",
-        alt: "Clearstone Surfaces homepage hero screenshot",
-      },
-      {
-        src: "/assets/clearstone-homepage-mid.png",
-        alt: "Clearstone Surfaces homepage mid-page screenshot",
-        unoptimized: true,
-      },
-      {
-        src: "/assets/clearstone-homepage-footer.png",
-        alt: "Clearstone Surfaces homepage footer screenshot",
-      },
-    ],
-  },
-  {
-    title: "HarborStone Insurance",
-    id: "harborstone-title",
-    metadata: "WEB DESIGN / CONCEPT STUDY / 2026",
-    description:
-      "A modern insurance website concept designed to make complex coverage feel clearer, calmer, and easier to navigate while maintaining the trust and professionalism expected from a financial-services brand.",
-    images: [
-      {
-        src: "/assets/HSI-homepage-hero.png",
-        alt: "HarborStone Insurance homepage hero screenshot",
-      },
-      {
-        src: "/assets/HSI-homepage-mid.png",
-        alt: "HarborStone Insurance homepage mid-page screenshot",
-      },
-      {
-        src: "/assets/HSI-homepage-footer.png",
-        alt: "HarborStone Insurance homepage footer screenshot",
-      },
-    ],
-  },
-  {
-    title: "Frugal Kitchens",
-    id: "frugal-title",
-    metadata: "WEB DESIGN / CONCEPT STUDY / 2026",
-    description:
-      "A kitchen-design website concept balancing aspirational interiors with practical usability, creating a cleaner path from inspiration and product discovery to understanding the offer and starting a project.",
-    images: [
-      {
-        src: "/assets/fk-homepage-hero.png",
-        alt: "Frugal Kitchens homepage hero screenshot",
-      },
-      {
-        src: "/assets/fk-homepage-mid.png",
-        alt: "Frugal Kitchens homepage mid-page screenshot",
-      },
-      {
-        src: "/assets/fk-homepage-footer.png",
-        alt: "Frugal Kitchens homepage footer screenshot",
-      },
-    ],
-  },
-  {
-    title: "95 Green Shark",
-    id: "green-shark-title",
-    metadata: "WEB DESIGN / CONCEPT STUDY / 2026",
-    description:
-      "A digital-marketing website concept designed to present strategy, content, SEO, and web expertise through a clearer, more confident experience built around strong hierarchy, focused messaging, and conversion-led structure.",
-    images: [
-      {
-        src: "/assets/95GS-homepage-hero.png",
-        alt: "95 Green Shark homepage hero screenshot",
-      },
-      {
-        src: "/assets/95GS-homepage-mid.png",
-        alt: "95 Green Shark homepage mid-page screenshot",
-      },
-      {
-        src: "/assets/95GS-homepage-footer.png",
-        alt: "95 Green Shark homepage footer screenshot",
-      },
-    ],
-  },
-];
+import WebDesignShowcase from "./WebDesignShowcase";
 
 const emailProjects = [
   {
@@ -176,14 +89,9 @@ const emailProjects = [
   },
 ];
 
-function FeaturedProject({ project, variant = "web" }) {
-  const isEmail = variant === "email";
-
+function FeaturedProject({ project }) {
   return (
-    <section
-      className={`featured-project ${isEmail ? "email-project" : ""}`}
-      aria-labelledby={project.id}
-    >
+    <section className="featured-project email-project" aria-labelledby={project.id}>
       <div className="section-inner featured-project-grid">
         <div className="project-copy">
           <p className="project-meta">{project.metadata}</p>
@@ -194,13 +102,13 @@ function FeaturedProject({ project, variant = "web" }) {
 
         <div className="project-gallery-wrap">
           <div
-            className={`project-gallery ${isEmail ? "email-gallery" : ""}`}
-            aria-label={`${project.title} ${isEmail ? "email design sections" : "website screenshots"}`}
+            className="project-gallery email-gallery"
+            aria-label={`${project.title} email design sections`}
             tabIndex={0}
           >
             {project.images.map((image, index) => (
               <figure
-                className={`gallery-slide ${isEmail ? "email-slide" : ""}`}
+                className="gallery-slide email-slide"
                 key={image.src}
               >
                 <Image
@@ -208,8 +116,7 @@ function FeaturedProject({ project, variant = "web" }) {
                   alt={image.alt}
                   fill
                   unoptimized={image.unoptimized}
-                  sizes={isEmail ? "(max-width: 899px) 90vw, 56vw" : "(max-width: 899px) 92vw, 62vw"}
-                  priority={index === 0 && project.id === "clearstone-title"}
+                  sizes="(max-width: 899px) 90vw, 56vw"
                 />
               </figure>
             ))}
@@ -232,19 +139,6 @@ export default function SelectedWork() {
     <>
       <SeoContentStrategy />
 
-      <section className="work-intro" id="work" aria-labelledby="selected-work-title">
-        <div className="section-inner work-intro-inner">
-          <p className="section-label">SELECTED WORK / 01</p>
-          <h2 id="selected-work-title">
-            A selection of web and email design work.
-          </h2>
-        </div>
-      </section>
-
-      {webProjects.map((project) => (
-        <FeaturedProject project={project} key={project.id} />
-      ))}
-
       <section className="email-showcase" aria-labelledby="email-showcase-title">
         <div className="section-inner email-intro">
           <p className="section-label">EMAIL DESIGN / 02</p>
@@ -255,9 +149,11 @@ export default function SelectedWork() {
         </div>
 
         {emailProjects.map((project) => (
-          <FeaturedProject project={project} variant="email" key={project.id} />
+          <FeaturedProject project={project} key={project.id} />
         ))}
       </section>
+
+      <WebDesignShowcase />
 
       <section className="capabilities-section" aria-labelledby="capabilities-title">
         <div className="section-inner capabilities-inner">

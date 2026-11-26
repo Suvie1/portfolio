@@ -381,30 +381,8 @@ a:focus-visible {
   letter-spacing: 0.22em;
 }
 
-.work-intro {
-  padding: clamp(84px, 10vw, 138px) 0 clamp(72px, 8vw, 104px);
-}
-
-#seo-strategy + .work-intro {
-  padding-top: clamp(68px, 7vw, 96px);
-}
-
-.work-intro-inner {
-  max-width: none;
-}
-
 .section-label {
   margin: 0 0 clamp(16px, 1.6vw, 24px);
-}
-
-.work-intro h2 {
-  max-width: 740px;
-  margin: 0;
-  font-family: "Instrument Serif", Georgia, serif;
-  font-size: clamp(48px, 5vw, 76px);
-  font-weight: 400;
-  line-height: 0.98;
-  letter-spacing: -0.028em;
 }
 
 .featured-project {
@@ -1123,18 +1101,8 @@ a:focus-visible {
     aspect-ratio: 4 / 3;
   }
 
-  .work-intro {
-    padding: 78px 0 72px;
-  }
-
   .section-label {
     margin-bottom: 18px;
-  }
-
-  .work-intro h2 {
-    max-width: 9.5ch;
-    font-size: clamp(42px, 11.5vw, 60px);
-    line-height: 0.98;
   }
 
   .featured-project {
