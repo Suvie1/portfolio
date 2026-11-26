@@ -1,0 +1,97 @@
+export const writingSamples = [
+  {
+    id: "history-ai-jobs",
+    platform: "LinkedIn",
+    title: "We've Been Here Before: What History Teaches Us About AI and Jobs",
+    image: "/assets/writing/linkedin-history-ai-and-jobs.png",
+    imageWidth: 458,
+    imageHeight: 496,
+    excerpt:
+      "Understanding how this has happened historically will help you clearly observe the patterns and see opportunities others may be blind to.",
+    url: "https://www.linkedin.com/pulse/weve-been-here-before-what-history-teaches-us-ai-jobs-omosuvie--uwbpe/",
+    urlVerified: true,
+  },
+  {
+    id: "ai-data-centres",
+    platform: "LinkedIn",
+    title: "Why Are Billionaires Investing in an AI Future That Might End Us All?",
+    image: "/assets/writing/linkedin-ai-data-centres-billionaires.png",
+    imageWidth: 453,
+    imageHeight: 515,
+    excerpt:
+      "Abundance of production does not automatically translate into abundance for everyone.",
+    url: "https://www.linkedin.com/pulse/why-billionaires-investing-ai-future-might-end-us-all-omosuvie--ra3me/",
+    urlVerified: true,
+  },
+  {
+    id: "just-learn-ai",
+    platform: "LinkedIn",
+    title: '"Just Learn AI" Is Not the Career Advice You Think It Is',
+    image: "/assets/writing/linkedin-just-learn-ai-career-advice.png",
+    imageWidth: 457,
+    imageHeight: 506,
+    excerpt:
+      "Knowing how to use AI is not the same as knowing how to do the job.",
+    url: "https://www.linkedin.com/pulse/just-learn-ai-career-advice-you-think-joseph-omosuvie--e2dbc/",
+    urlVerified: true,
+  },
+  {
+    id: "zero-click-searches",
+    platform: "LinkedIn",
+    title: "Google Searches and Falling Click-Through Rates",
+    image: "/assets/writing/linkedin-seo-zero-click-searches.png",
+    imageWidth: 446,
+    imageHeight: 482,
+    excerpt:
+      "On changing search behavior and why familiar informational keywords no longer guarantee a click through to a website.",
+    url: "https://www.linkedin.com/posts/joseph-copywriter_google-searches-like-x-vs-y-what-is-x-share-7528077240954384384-1HrZ/",
+    urlVerified: true,
+  },
+  {
+    id: "stop-writing-seo-content",
+    platform: "LinkedIn",
+    title: "Stop writing SEO content for your business.",
+    image: null,
+    previewText: "What information can your SEO content provide that AI cannot already answer?",
+    excerpt:
+      "The post argues for content drawn from a business's own processes, customer interactions, original ideas, and data.",
+    url: "https://www.linkedin.com/posts/joseph-copywriter_stop-writing-seo-content-for-your-business-share-7527359627106123776-NFQD/",
+    urlVerified: true,
+  },
+  {
+    id: "cybersecurity-training",
+    platform: "X",
+    title: "Why Basic Cybersecurity Training Is Important for Every Business",
+    image: "/assets/writing/x-cybersecurity-training-business.png",
+    imageWidth: 665,
+    imageHeight: 453,
+    excerpt:
+      "An article about why basic cybersecurity training matters to businesses, including those that assume attacks only affect larger companies.",
+    url: null,
+    urlVerified: false,
+  },
+  {
+    id: "openai-business-hub",
+    platform: "X",
+    title: "OpenAI's New Business Hub Could Change How Customers Find Your Business",
+    image: "/assets/writing/x-openai-business-hub.png",
+    imageWidth: 652,
+    imageHeight: 449,
+    excerpt:
+      "An article on OpenAI's business hub and what it could mean for how customers discover and ask questions about businesses.",
+    url: null,
+    urlVerified: false,
+  },
+  {
+    id: "ranking-first-invisible",
+    platform: "X",
+    title: "You Can Rank #1 and Still Be Invisible. SEO Has Changed",
+    image: "/assets/writing/x-ranking-first-still-invisible.png",
+    imageWidth: 659,
+    imageHeight: 456,
+    excerpt:
+      "Most people think higher rankings mean better results. That assumption used to work until AI took over search. Not anymore.",
+    url: null,
+    urlVerified: false,
+  },
+];

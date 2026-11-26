@@ -1,6 +1,6 @@
 const navItems = [
   { label: "Work", href: "#work" },
-  { label: "Writing", href: "#seo-strategy" },
+  { label: "Writing", href: "#writing" },
   { label: "Services", href: "#capabilities-title" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },

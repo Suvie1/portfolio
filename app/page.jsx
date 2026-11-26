@@ -1,5 +1,6 @@
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
+import PublishedWriting from "../Components/PublishedWriting";
 import SelectedWork from "../Components/SelectedWork";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <PublishedWriting />
         <SelectedWork />
       </main>
     </>
